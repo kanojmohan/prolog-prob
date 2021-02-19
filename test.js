@@ -1,2 +1,2 @@
-console.log('git-test')
-console.log('git-test 3')
+console.log("git-test");
+console.log("git-test 3");
