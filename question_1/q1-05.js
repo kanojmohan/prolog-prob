@@ -4,4 +4,5 @@ const reverseList = (input) => {
   let res = input.reverse();
   return res;
 };
+
 console.log(reverseList(num));
