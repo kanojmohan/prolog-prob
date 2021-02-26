@@ -1,6 +1,6 @@
-// 1.08 (**) Eliminate consecutive duplicates of list elements.
-var arr = [5, 5, 5, 2, 2, 2, 2, 2, 9, 4, 5, 5, 5];
+// Eliminate consecutive duplicates of list elements.
 
+var arr = [5, 5, 5, 2, 2, 2, 2, 2, 9, 4, 5, 5, 5];
 function identical(array) {
   var newArray = [];
   newArray.push(arr[0]);
@@ -10,9 +10,8 @@ function identical(array) {
       newArray.push(array[i + 1]);
     }
   }
-  console.log(newArray);
+
+  return newArray;
 }
 
-console.log("sample");
-
-identical(arr);
+console.log(identical(arr));
