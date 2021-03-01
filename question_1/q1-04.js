@@ -11,9 +11,11 @@ const juice = [
 // let count = juice.length;
 // console.log(count);
 function numberOfElement(input) {
-  //   let count = 1;
-  for (count in input) {
+  let count = 0;
+  for (i = 0; i < input.length; i++) {
+    count++;
   }
-  return ++count;
+  console.log(count);
+  return count;
 }
 console.log(numberOfElement(juice));
