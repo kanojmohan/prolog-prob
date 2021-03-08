@@ -1,8 +1,3 @@
-// 1.09 (**) Pack consecutive duplicates of list elements into sublists.
-// Example:
-// ?- pack([a,a,a,a,b,c,c,a,a,d,e,e,e,e],X).
-// X = [[a,a,a,a],[b],[c,c],[a,a],[d],[e,e,e,e]]
-
 const inputArr = [
   "a",
   "a",
@@ -21,20 +16,21 @@ const inputArr = [
 ];
 
 const packCon = (input) => {
-  const resultArry = [];
-  for (var i = 0; i < input.length; i++) {
-    let tempArry = [];
-    if (input[i] === input[i + 1]) {
-      console.log("tempArray", tempArry);
-      tempArry.push(input[i]);
-      console.log("tempArray", tempArry);
+  let tempArry = [];
+  for (i = 0; i < input.length; i++) {
+    if (tempArry.length === 0) {
+      tempArry.push([input[i]]);
     } else {
-      console.log("else");
-      resultArry.push(tempArry);
+      const temp = tempArry[tempArry.length - 1];
+      //   console.log(temp);
+      if (temp[0] === input[i]) {
+        temp.push(input[i]);
+      } else {
+        tempArry.push([input[i]]);
+      }
     }
   }
-
-  return resultArry;
+  return tempArry;
 };
 
 console.log(packCon(inputArr));

@@ -15,7 +15,7 @@ function numberOfElement(input) {
   for (i = 0; i < input.length; i++) {
     count++;
   }
-  console.log(count);
+
   return count;
 }
 console.log(numberOfElement(juice));
